@@ -144,7 +144,6 @@ def word_tokenizer(text):
     tokens = [stemmer.stem(t) for t in tokens if t not in stopwords.words('english')]
     return tokens
 
-
 def tfidf_vectorise(sentences):
     tfidf_vectorizer = TfidfVectorizer(tokenizer=word_tokenizer,
                                         stop_words=stopwords.words('english'),
